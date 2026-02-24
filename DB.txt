@@ -1,0 +1,24 @@
+CREATE DATABASE empleados;
+USE empleados;
+
+CREATE TABLE emp (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    edad INT,
+    pais VARCHAR(100),
+	cargo VARCHAR(100),
+    sueldo DOUBLE
+)
+
+-- Datos de prueba
+INSERT INTO emp (nombre, edad, pais, cargo, sueldo) VALUES
+('Carlos García', 28, 'México', 'Dev Frontend', 75000),
+('Ana López', 32, 'España', 'Dev Backend', 90000),
+('Luis Martínez', 25, 'Colombia', 'Diseñador UI', 60000),
+('María Rodríguez', 35, 'Argentina', 'Project Manager', 110000),
+('Pedro Sánchez', 29, 'Perú', 'Dev Fullstack', 85000),
+('Laura Torres', 27, 'Chile', 'QA Tester', 55000),
+('Diego Flores', 31, 'Venezuela', 'DevOps', 95000),
+('Sofía Herrera', 24, 'Ecuador', 'Dev Frontend', 65000),
+('Andrés Morales', 33, 'Bolivia', 'DBA', 80000),
+('Valentina Cruz', 26, 'Uruguay', 'Dev Backend', 88000);
