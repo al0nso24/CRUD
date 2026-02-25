@@ -21,4 +21,13 @@ INSERT INTO emp (nombre, edad, pais, cargo, sueldo) VALUES
 ('Diego Flores', 31, 'Venezuela', 'DevOps', 95000),
 ('Sofía Herrera', 24, 'Ecuador', 'Dev Frontend', 65000),
 ('Andrés Morales', 33, 'Bolivia', 'DBA', 80000),
-('Valentina Cruz', 26, 'Uruguay', 'Dev Backend', 88000);
+('Valentina Cruz', 26, 'Uruguay', 'Dev Backend', 88000),
+('Fernando Ruiz', 30, 'México', 'Scrum Master', 92000),
+('Camila Navarro', 28, 'Perú', 'UX Researcher', 70000),
+('Jorge Castillo', 34, 'España', 'Arquitecto de Software', 120000),
+('Daniela Rojas', 27, 'Colombia', 'Analista de Datos', 78000),
+('Ricardo Paredes', 29, 'Chile', 'Soporte TI', 50000);
+
+SELECT count(*) FROM emp as TOTAL;
+
+TRUNCATE TABLE emp;

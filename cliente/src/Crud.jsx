@@ -191,41 +191,44 @@ export default function Crud(){
                     <div className="col-12 col-md-12 col-lg-12 col-xl-12">
                         {
                             listaEmp.length > 0 ?(
-                            <table class="table table-striped">
-                                <thead className="text-center table-dark">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Edad</th>
-                                        <th>País</th>
-                                        <th>Cargo</th>
-                                        <th>Sueldo</th>
-                                        <th>IGV</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-center">
-                                    {
-                                        listaEmp.map((e, key)=>(
-                                            <tr key={e.id}>
-                                                <td>{e.id}</td>
-                                                <td>{e.nombre}</td>
-                                                <td>{e.edad}</td>
-                                                <td>{e.pais}</td>
-                                                <td>{e.cargo}</td>
-                                                <td>S/. {e.sueldo}</td>
-                                                <td>{e.igv.toFixed(2)}</td>
-                                                <td>
-                                                    <div class="d-flex gap-3 justify-content-center">
-                                                        <button class="btn btn-danger" onClick={()=> deleteEmpleado(e)} type="button">Eliminar</button>
-                                                        <button class="btn btn-secondary" onClick={() => recuperarDatos(e)} type="button">Actualizar</button>
-                                                    </div>
-                                                </td>
+                                <>
+                                    <p><b>Número de Empleados:</b> <span>{listaEmp.length}</span></p>
+                                    <table class="table table-striped">
+                                        <thead className="text-center table-dark">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nombre</th>
+                                                <th>Edad</th>
+                                                <th>País</th>
+                                                <th>Cargo</th>
+                                                <th>Sueldo</th>
+                                                <th>IGV</th>
+                                                <th>Acciones</th>
                                             </tr>
-                                        ))
-                                    }
-                                </tbody>
-                            </table>
+                                        </thead>
+                                        <tbody className="text-center">
+                                            {
+                                                listaEmp.map((e, key) => (
+                                                    <tr key={e.id}>
+                                                        <td>{e.id}</td>
+                                                        <td>{e.nombre}</td>
+                                                        <td>{e.edad}</td>
+                                                        <td>{e.pais}</td>
+                                                        <td>{e.cargo}</td>
+                                                        <td>S/. {e.sueldo}</td>
+                                                        <td>{e.igv.toFixed(2)}</td>
+                                                        <td>
+                                                            <div class="d-flex gap-3 justify-content-center">
+                                                                <button class="btn btn-danger" onClick={() => deleteEmpleado(e)} type="button">Eliminar</button>
+                                                                <button class="btn btn-secondary" onClick={() => recuperarDatos(e)} type="button">Actualizar</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                ))
+                                            }
+                                        </tbody>
+                                    </table>
+                                </>
                             ):(
                                 existe&& (
                                     <p>Aún no hay empleados registrados en la tabla 😢</p>
