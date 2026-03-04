@@ -25,7 +25,7 @@ export default function Crud(){
             }).then((res) => {
                 getEmpleados();
                 Swal.fire({
-                    text: "Emlpleado registrado!",
+                    text: "Empleado registrado!",
                     icon: "success",
                     draggable: true
                 });
@@ -103,7 +103,7 @@ export default function Crud(){
         }).then((res)=>{
             getEmpleados()
             Swal.fire({
-                text: "Emlpleado actualizado!",
+                text: "Empleado actualizado!",
                 icon: "success",
                 draggable: true
             });
