@@ -215,7 +215,7 @@ export default function Crud(){
                                                         <td>{e.edad}</td>
                                                         <td>{e.pais}</td>
                                                         <td>{e.cargo}</td>
-                                                        <td>{e.sueldo}</td>
+                                                        <td>S/. {e.sueldo}</td>
                                                         <td>{e.igv.toFixed(2)}</td>
                                                         <td>
                                                             <div class="d-flex gap-3 justify-content-center">
