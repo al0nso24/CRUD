@@ -165,7 +165,7 @@ export default function Crud(){
                                 ></input>
                             </div>
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">Sueldo (S/.)</span>
+                                <span class="input-group-text" id="basic-addon1">Sueldo</span>
                                 <input class="form-control" aria-label="Username" aria-describedby="basic-addon1"
                                     value={sueldo} onChange={(e) => setSueldo(e.target.value)} required
                                 ></input>
@@ -215,7 +215,7 @@ export default function Crud(){
                                                         <td>{e.edad}</td>
                                                         <td>{e.pais}</td>
                                                         <td>{e.cargo}</td>
-                                                        <td>S/. {e.sueldo}</td>
+                                                        <td>{e.sueldo}</td>
                                                         <td>{e.igv.toFixed(2)}</td>
                                                         <td>
                                                             <div class="d-flex gap-3 justify-content-center">
