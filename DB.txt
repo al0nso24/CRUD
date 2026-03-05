@@ -10,6 +10,8 @@ CREATE TABLE emp (
     sueldo DOUBLE
 )
 
+SELECT id, nombre, edad, pais, cargo, sueldo, (sueldo * 0.18) AS igv FROM emp;
+
 -- Procedimiento para buscar el empleado:
 DELIMITER //
 CREATE PROCEDURE sp_buscarempleado(in idempleado INT)
@@ -20,7 +22,7 @@ END //
 DELIMITER ; 
 CALL sp_buscarempleado("1");
 
--- Datos de prueba
+-- Datos de prueba:
 INSERT INTO emp (nombre, edad, pais, cargo, sueldo) VALUES
 ('Carlos García', 28, 'México', 'Dev Frontend', 75000),
 ('Ana López', 32, 'España', 'Dev Backend', 90000),
