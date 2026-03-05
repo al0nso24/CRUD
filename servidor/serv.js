@@ -64,6 +64,19 @@ app.put("/actualizar/:id", (req, res)=>{
     )
 })
 
+//Buscar al empleado en base a su id:
+app.get("/busquedaxid/:idempleado", (req, res)=>{
+    const idempleado = req.params.idempleado;
+    db.query("CALL sp_buscarempleado(?)", [idempleado], (err, result)=>{
+        if(err){
+            console.log("Error.");
+        }else{
+            res.send(result[0]);  //Con "[0]" porque es un procedimiento.
+        }
+    })
+})
+
+
 //Este es mi puerto:
 app.listen(3001, ()=>{
     console.log("Puerto activado.")

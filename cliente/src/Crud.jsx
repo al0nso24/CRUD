@@ -135,7 +135,7 @@ export default function Crud(){
 
 
     return (
-        <div className="p-3">
+        <div className="p-4">
             <div className="container mb-4">
                 <div className="row d-flex justify-content-center">
                     <div className="col-12 col-md-6 col-lg-6 col-xl-6">
