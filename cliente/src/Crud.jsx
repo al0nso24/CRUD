@@ -133,6 +133,14 @@ export default function Crud(){
         setActualizar(false); //Al darle al botón "Cancelar" vuelve el de Agregar.
     }
 
+    //Suma del sueldo de los empleados:
+    const sumaSueldo = () =>{
+        let total = 0;
+        for (let i = 0; i < listaEmp.length; i++) {
+            total+=listaEmp[i].sueldo;
+        }
+        return total;
+    }
 
     return (
         <div className="p-4">
@@ -193,6 +201,7 @@ export default function Crud(){
                             listaEmp.length > 0 ?(
                                 <>
                                     <p><b>Número de Empleados:</b> <span>{listaEmp.length}</span></p>
+                                    <p><b>Total del sueldo:</b> <span>S/. {sumaSueldo()}</span></p>
                                     <table class="table table-striped">
                                         <thead className="text-center table-dark">
                                             <tr>
